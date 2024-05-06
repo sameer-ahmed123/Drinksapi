@@ -1,0 +1,17 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+<div class="Drink_wrapper">
+    {% for drink in drinks %}
+    <div class="Drink_card">
+        <p class="Drink_name"><a href="{% url 'drink_detail' drink.id %}">{{drink.name}}</a></p>
+        <p class="Drink_discrp">{{drink.description}}</p>
+    </div>
+    {% endfor %}
+
+    <button><a href="{%  url 'create_drink' %}" style="text-decoration: none;">Add new drink</a></button>
+</div>
+
+
+
+{% endblock %}

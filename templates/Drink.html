@@ -1,0 +1,11 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+<div class="Drink_card">
+    <p class="Drink_name">{{drink.name}}</p>
+    <p class="Drink_discrp">{{drink.description}}</p>
+</div>
+
+<a href="{% url 'drink_update' drink.id %}">edit</a>
+<a href="{% url 'drink_delete' drink.id %}">Delete</a>
+{% endblock %}
